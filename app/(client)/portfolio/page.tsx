@@ -13,7 +13,7 @@ export default function Portfolio() {
 				<Navbar/>
 			</header>
 
-			<main>
+			<main className='mt-32'>
 				<p className='font-heading text-8xl'>portfolio</p>
 			</main>
 		</>

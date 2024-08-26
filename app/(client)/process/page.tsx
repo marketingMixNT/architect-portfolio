@@ -13,7 +13,7 @@ export default function Process() {
 				<Navbar/>
 			</header>
 
-			<main>
+			<main className='mt-32'>
 				<p className='font-heading text-8xl'>Proces projektowy</p>
 			</main>
 		</>

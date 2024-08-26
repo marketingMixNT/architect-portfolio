@@ -13,7 +13,7 @@ export default function About() {
 				<Navbar/>
 			</header>
 
-			<main>
+			<main className='mt-32'>
 				<p className='font-heading text-8xl'>o mnie</p>
 			</main>
 		</>
