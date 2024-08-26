@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function Home() {
 	return (
 		<>
-			<header className=" w-full h-screen bg-[url('/assets/hero--mobile.webp')] sm:bg-[url('/assets/hero.webp')] bg-center bg-cover bg-no-repeat bg-fixed bg-blend-multiply bg-gray-300 flex justify-center items-center relative">
+			<header className=" w-full h-screen bg-[url('/assets/hero--mobile.webp')] sm:bg-[url('/assets/hero.webp')] bg-center bg-cover bg-no-repeat sm:bg-fixed bg-blend-multiply bg-gray-300 flex justify-center items-center relative">
 				<Navbar />
 
 				<div className='sm:h-[70%] 2xl:h-[60%] w-[90%]  flex flex-col md:flex-row justify-between gap-12 sm:gap-0'>
