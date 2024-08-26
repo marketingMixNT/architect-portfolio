@@ -20,10 +20,10 @@ const config: Config = {
 			},
 			colors: {
 				primary: {
-					400: '#333',
+					400: '#ffffff',
 				},
 				secondary: {
-					400: '#333',
+					400: '#000000',
 				},
 				accent: {
 					400: '#333',
