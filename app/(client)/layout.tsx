@@ -11,9 +11,9 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='pl' className='scroll-smooth duration-300'>
+		<html lang='pl' className=''>
 			<body
-				className={`${font_heading} ${font_text}  font-text bg-bgLight-400 dark:bg-bgDark-400 selection:bg-ownPink-600`}>
+				className={`${font_heading} ${font_text}  font-text bg-bgLight-400 dark:bg-bgDark-400 selection:bg-ownPink-600 scroll-smooth duration-300`}>
 				<Provider>
 					{children}
 					<Footer />
