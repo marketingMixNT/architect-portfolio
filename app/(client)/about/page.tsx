@@ -1,5 +1,5 @@
+import Header from '@/app/components/Header'
 import type { Metadata } from 'next'
-import Navbar from '@/app/components/nav/Navbar'
 
 export const metadata: Metadata = {
 	title: 'O mnie | Anna Zientara',
@@ -9,9 +9,7 @@ export const metadata: Metadata = {
 export default function About() {
 	return (
 		<>
-			<header className=''>
-				<Navbar/>
-			</header>
+			<Header />
 
 			<main className='mt-32'>
 				<p className='font-heading text-8xl'>o mnie</p>

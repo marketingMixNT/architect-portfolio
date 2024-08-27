@@ -1,23 +1,70 @@
+// 'use client'
+
+// import React, { useEffect, useState } from 'react'
+// import { useTheme } from 'next-themes'
+
+// import { Sun, Moon } from 'lucide-react'
+
+// const ThemeToggler = (props: { className?: string; isScrolled?: boolean }) => {
+// 	const [mounted, setMounted] = useState(false)
+// 	const { theme, setTheme } = useTheme()
+
+// 	useEffect(() => setMounted(true), [])
+
+// 	if (!mounted) return null
+
+// 	return (
+// 		<button
+// 			className={`p-2 border border-transparent rounded-lg hover:bg-gray-200 hover:bg-opacity-10 duration-500  ${
+// 				props.className
+// 			} ${props.isScrolled ? 'hover:border-fontDark dark:hover:border-fontLight' : 'hover:border-fontLight'}  `}
+// 			onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+// 			{theme === 'dark' ? (
+// 				<Sun className='dark:text-fontLight' />
+// 			) : (
+// 				<Moon
+// 					className={`text-fontDark  ${props.isScrolled ? 'text-fontDark dark:text-fontLight' : 'lg:text-fontLight'}`}
+// 				/>
+// 			)}
+// 		</button>
+// 	)
+// }
+
+// export default ThemeToggler
+
 'use client'
 
 import React, { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 
-const ThemeToggler = (props: { className?: string }) => {
-	const [mounted, setMounted] = useState(false)
-	const { theme, setTheme } = useTheme()
+import { Sun, Moon } from 'lucide-react'
 
-	useEffect(() => setMounted(true), [])
+const ThemeToggler = (props: { className?: string; isScrolled?: boolean }) => {
+  const [mounted, setMounted] = useState(false)
+  const { theme, setTheme, resolvedTheme } = useTheme()
 
-	if (!mounted) return null
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
-	return (
-		<button
-			className={`border border-transparent hover:border-black p-2 rounded-lg hover:bg-gray-200 hover:bg-opacity-10 duration-500 ${props.className}`}
-			onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-			{theme === 'dark' ? '🌞' : '🌙'}
-		</button>
-	)
+  if (!mounted) return null
+
+  return (
+    <button
+      className={`p-2 border border-transparent rounded-lg hover:bg-gray-200 hover:bg-opacity-10 duration-500  ${
+        props.className
+      } ${props.isScrolled ? 'hover:border-fontDark dark:hover:border-fontLight' : 'hover:border-fontLight'}  `}
+      onClick={() => setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')}
+    >
+      {theme === 'dark' || resolvedTheme === 'dark' ? (
+        <Sun className='dark:text-fontLight' />
+      ) : (
+        <Moon
+          className={`text-fontDark  ${props.isScrolled ? 'text-fontDark dark:text-fontLight' : 'lg:text-fontLight'}`}
+        />
+      )}
+    </button>
+  )
 }
 
 export default ThemeToggler

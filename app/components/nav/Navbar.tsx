@@ -1,11 +1,13 @@
 'use client'
 
-import Link from 'next/link'
-import ThemeToggler from './ThemeToggler'
-import NavLink from './NavLink'
-import { Sling as Hamburger } from 'hamburger-react'
 import { useState, useEffect } from 'react'
-import MobileMenu from './MobileMenu'
+import Link from 'next/link'
+
+import { Sling as Hamburger } from 'hamburger-react'
+
+import NavLink from '@/app/components/nav/NavLink'
+import ThemeToggler from '@/app/components/nav/ThemeToggler'
+import MobileMenu from '@/app/components/nav/MobileMenu'
 
 const navLinks = [
 	{ href: '/o-mnie', label: 'O mnie' },
@@ -40,24 +42,35 @@ const Navbar = () => {
 
 	return (
 		<>
-			<nav className={` fixed top-0 left-0 right-0 z-50 transition-all ${isScrolled ? 'bg-white dark:bg-black' : ''}`}>
+			<nav
+				className={` fixed top-0 left-0 right-0  text-fontLight   shadow-2xl shadow-gray-500 dark:shadow-gray-800 transition-all z-50 ${
+					isScrolled ? 'bg-primary-600 dark:bg-secondary-400' : ''
+				}`}>
 				{/* CONTAINER */}
-				<div className={`max-w-[1800px] mx-auto flex justify-between items-center  px-1 sm:px-4 py-3 lg:py-5 border-b  ${!isScrolled ? ' border-secondary-400 dark:border-primary-400' : 'border-primary-400 dark:border-secondary-400'}`}>
+				<div
+					className={`max-w-[1800px] mx-auto flex justify-between items-center  px-4 py-3 lg:py-5 border-b  ${
+						!isScrolled ? ' border-primary-400 ' : 'border-primary-600 dark:border-secondary-400'
+					}`}>
+					{/* links */}
 					<div className='flex'>
-						<Link href='/' className='text-3xl sm:text-4xl font-semibold mr-12'>
+						<Link
+							href='/'
+							className={`mr-12 text-3xl sm:text-4xl font-semibold  ${
+								isScrolled ? 'text-fontDark dark:text-fontLight' : ''
+							}`}>
 							Anna Zientara
 						</Link>
 
 						<ul className='hidden lg:flex justify-center items-center gap-8'>
 							{navLinks.map((link, index) => (
-								<NavLink key={index} link={link} />
+								<NavLink key={index} link={link} isScrolled={isScrolled} />
 							))}
 						</ul>
 					</div>
-
+					{/* themeToggler & hamburger */}
 					<div className='flex gap-4'>
-						<ThemeToggler className='hidden lg:block' />
-						<div className='lg:hidden'>
+						<ThemeToggler className='hidden lg:block' isScrolled={isScrolled} />
+						<div className={`lg:hidden ${isScrolled ? 'text-fontDark dark:text-fontLight' : ''}`}>
 							<Hamburger toggled={isOpen} toggle={setOpen} distance='sm' label='Otwórz menu' />
 						</div>
 					</div>

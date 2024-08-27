@@ -20,22 +20,27 @@ const config: Config = {
 			},
 			colors: {
 				primary: {
-					400: '#ffffff',
+					400: '#f3f4f6',
+					600: '#d1d5db',
+					800: '#9ca3af',
 				},
 				secondary: {
-					400: '#000000',
+					100: '#3f3f46',
+					200: '#27272a',
+					300: '#18181b',
+					400: '#09090b',
 				},
 				accent: {
 					400: '#333',
 				},
-				fontDark: '#0f181f',
-				fontLight: '#faf7f3',
+				fontDark: '#333',
+				fontLight: '#f3f4f6',
 
 				bgLight: {
-					400: '#ffffff',
+					400: '#f3f4f6',
 				},
 				bgDark: {
-					400: '#000000',
+					400: '#09090b',
 				},
 			},
 		},
