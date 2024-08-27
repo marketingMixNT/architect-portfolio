@@ -40,9 +40,9 @@ const Navbar = () => {
 
 	return (
 		<>
-			<nav className={` fixed top-0 left-0 right-0 z-50 transition-all duration-1000 ${isScrolled ? 'bg-white dark:bg-black' : ''}`}>
+			<nav className={` fixed top-0 left-0 right-0 z-50 transition-all ${isScrolled ? 'bg-white dark:bg-black' : ''}`}>
 				{/* CONTAINER */}
-				<div className={`max-w-[1800px] mx-auto flex justify-between items-center duration-1000 px-1 sm:px-4 py-3 lg:py-5 border-b  ${!isScrolled ? ' border-secondary-400 dark:border-primary-400' : 'border-primary-400 dark:border-secondary-400'}`}>
+				<div className={`max-w-[1800px] mx-auto flex justify-between items-center  px-1 sm:px-4 py-3 lg:py-5 border-b  ${!isScrolled ? ' border-secondary-400 dark:border-primary-400' : 'border-primary-400 dark:border-secondary-400'}`}>
 					<div className='flex'>
 						<Link href='/' className='text-3xl sm:text-4xl font-semibold mr-12'>
 							Anna Zientara
