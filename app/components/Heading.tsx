@@ -2,7 +2,7 @@ import React from 'react'
 
 const Heading = (props:{children:React.ReactNode}) => {
   return (
-    <h2 className='text-5xl uppercase'>{props.children}</h2>
+    <h2 className='text-5xl xs:text-6xl uppercase font-heading'>{props.children}</h2>
   )
 }
 

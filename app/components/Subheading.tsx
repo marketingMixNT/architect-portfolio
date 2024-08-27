@@ -2,7 +2,7 @@ import React from 'react'
 
 const Subheading = (props:{children:React.ReactNode}) => {
   return (
-    <span className='text-xl uppercase'>{props.children}</span>
+    <span className='text-2xl uppercase font-heading'>{props.children}</span>
   )
 }
 

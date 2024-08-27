@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Section = (props:{children:React.ReactNode}) => {
+const Section = (props:{children:React.ReactNode,id?:string,className?:string}) => {
   return (
-   <section  className="py-20">{props.children}</section>
+   <section {...(props.id ? { id: props.id } : {})}  className={`${props.className}`}>{props.children}</section>
   )
 }
 

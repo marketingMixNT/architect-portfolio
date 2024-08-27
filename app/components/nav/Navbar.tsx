@@ -43,8 +43,8 @@ const Navbar = () => {
 	return (
 		<>
 			<nav
-				className={` fixed top-0 left-0 right-0  text-fontLight   shadow-2xl shadow-gray-500 dark:shadow-gray-800 transition-all z-50 ${
-					isScrolled ? 'bg-primary-600 dark:bg-secondary-400' : ''
+				className={` fixed top-0 left-0 right-0  text-fontLight transition-all z-50 ${
+					isScrolled ? 'bg-primary-600 dark:bg-secondary-400 shadow-2xl shadow-gray-500 dark:shadow-gray-800' : ''
 				}`}>
 				{/* CONTAINER */}
 				<div

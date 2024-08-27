@@ -24,8 +24,8 @@ const Header = () => {
 				</div>
 			</div>
 
-			<Link href='/#o-mnie'>
-				<CircleArrowDown className='absolute bottom-4 sm:bottom-12 left-1/2 -translate-x-1//2 sm:left-[4.6rem] w-12 h-12 animate-pulse' />
+			<Link href='/#o-mnie' aria-label='Przejdź do sekcji o mnie'>
+				<CircleArrowDown className='absolute bottom-4 sm:bottom-12 left-1/2 -translate-x-1/2 sm:left-[4.6rem] w-12 h-12 animate-pulse' />
 			</Link>
 		</header>
 	)
