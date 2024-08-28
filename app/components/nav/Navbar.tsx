@@ -9,12 +9,7 @@ import NavLink from '@/app/components/nav/NavLink'
 import ThemeToggler from '@/app/components/nav/ThemeToggler'
 import MobileMenu from '@/app/components/nav/MobileMenu'
 
-const navLinks = [
-	{ href: '/o-mnie', label: 'O mnie' },
-	{ href: '/proces-projektowy', label: 'Proces projektowy' },
-	{ href: '/portfolio', label: 'Portfolio' },
-	{ href: '/#kontakt', label: 'Kontakt' },
-]
+import navLinks from '@/app/utils/navLinks'
 
 const Navbar = () => {
 	const [isOpen, setOpen] = useState(false)

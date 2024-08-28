@@ -9,16 +9,10 @@ import Heading from '@/app/components/Heading'
 import BaseLink from '@/app/components/BaseLink'
 
 import DummyImage from '@/public/assets/hero.webp'
-import { Facebook, Instagram } from 'lucide-react'
 
-const socials = [
-	{
-		label: 'Facebook',
-		href: '#',
-		icon: <Facebook className='hover:scale-110 duration-500' />,
-	},
-	{ label: 'Instagram', href: '#', icon: <Instagram className='hover:scale-110 duration-500' /> },
-]
+import socials from '@/app/utils/socials'
+
+
 
 const Contact = () => {
 	return (
@@ -58,7 +52,7 @@ const Contact = () => {
 							<ul className='flex gap-4'>
 								{socials.map((social, index) => (
 									<li key={index}>
-										<Link href={social.href} target='_blank' rel='noreferrer nofollow'>
+										<Link href={social.href} target='_blank' rel='noreferrer nofollow' aria-label={social.label}>
 											{social.icon}
 										</Link>
 									</li>
