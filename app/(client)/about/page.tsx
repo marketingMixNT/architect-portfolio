@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 export default function About() {
 	return (
 		<>
-			<Header />
+			<Header image="bg-[url('/assets/hero--mobile.webp')] sm:bg-[url('/assets/hero.webp')]" title='O mnie' />
 
-			<main className='mt-32'>
+			<main className='py-20 text-center'>
 				<p className='font-heading text-8xl'>o mnie</p>
 			</main>
 		</>

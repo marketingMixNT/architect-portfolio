@@ -1,21 +1,29 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    async rewrites() {
-        return [
-          {
-            source: '/o\\-mnie',
-            destination: '/about',
-          },
-          {
-            source: '/proces\\-projektowy',
-            destination: '/process',
-          },
-          {
-            source: '/kontakt',
-            destination: '/contact',
-          },
-        ];
-      },
+	images: {
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'cdn.sanity.io',
+			},
+		],
+	},
+	async rewrites() {
+		return [
+			{
+				source: '/o\\-mnie',
+				destination: '/about',
+			},
+			{
+				source: '/proces\\-projektowy',
+				destination: '/process',
+			},
+			{
+				source: '/kontakt',
+				destination: '/contact',
+			},
+		]
+	},
 }
 
 export default nextConfig

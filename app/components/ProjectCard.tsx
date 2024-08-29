@@ -15,7 +15,7 @@ const ProjectCard = (props: { title: string; desc: string }) => {
 					<Text>{props.desc}</Text>
 				</div>
 
-				<BaseLink href='/o-mnie' className='lg:self-end pt-6 lg:pt-0'>
+				<BaseLink href={`/portfolio/${props.title}`} className='lg:self-end pt-6 lg:pt-0'>
 					Zobacz
 				</BaseLink>
 			</div>

@@ -13,7 +13,7 @@ export default function RootLayout({
 	return (
 		<html lang='pl' className='scroll-smooth scroll-p-20'>
 			<body
-				className={`${font_heading} ${font_text}  font-text bg-bgLight-400 dark:bg-bgDark-400 text-fontDark dark:text-fontLight selection:bg-ownPink-600  duration-300`}>
+				className={`${font_heading} ${font_text}  font-text bg-bgLight-400 dark:bg-bgDark-400 text-fontDark dark:text-fontLight   duration-300 overflow-y-scroll`}>
 				<Provider>
 					{children}
 					<Footer />

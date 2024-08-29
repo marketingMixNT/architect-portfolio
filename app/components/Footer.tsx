@@ -24,7 +24,7 @@ const Footer = () => {
 				{/* TOP */}
 				<div className='flex flex-col md:flex-row w-full justify-between items-start  pb-6 gap-12 md:gap-0'>
 					{/* logo */}
-					<div className=' flex flex-col text-center  md:text-left items-start gap-2 max-w-[250px] lg:max-w-[300px]'>
+					<div className=' flex flex-col text-center  md:text-left  lg:items-start gap-2  sm:max-w-[300px] mx-auto'>
 						<Link href='/' className='text-3xl sm:text-4xl font-semibold'>
 							Anna Zientara
 						</Link>
@@ -39,7 +39,7 @@ const Footer = () => {
 						</ul>
 					</div>
 					{/* contact */}
-					<div className='text-center md:text-left space-y-3'>
+					<div className='text-center md:text-left space-y-3 mx-auto'>
 						<h2 className='text-xl font-heading  uppercase '>Kontakt</h2>
 						<ul className='space-y-3'>
 							<li>
@@ -55,17 +55,17 @@ const Footer = () => {
 						</ul>
 					</div>
 					{/* socials */}
-					<div className=' flex flex-col space-y-3'>
+					<div className=' flex flex-col space-y-3 mx-auto'>
 						<h2 className='text-xl font-heading  uppercase '>Social Media</h2>
-						<ul className='flex gap-4'>
-								{socials.map((social, index) => (
-									<li key={index}>
-										<Link href={social.href} target='_blank' rel='noreferrer nofollow' aria-label={social.label}>
-											{social.icon}
-										</Link>
-									</li>
-								))}
-							</ul>
+						<ul className='flex justify-center md:justify-start gap-4'>
+							{socials.map((social, index) => (
+								<li key={index}>
+									<Link href={social.href} target='_blank' rel='noreferrer nofollow' aria-label={social.label}>
+										{social.icon}
+									</Link>
+								</li>
+							))}
+						</ul>
 					</div>
 				</div>
 
@@ -75,8 +75,10 @@ const Footer = () => {
 					<BaseLink href='#' noArrow small>
 						Polityka Prywatności
 					</BaseLink>
-				
-					<Text><span className='text-sm'>© {currentYear}</span> Anna Zientara  </Text>
+
+					<Text>
+						<span className='text-sm'>© {currentYear}</span> Anna Zientara{' '}
+					</Text>
 					<Link href='#' className='hover:scale-105 duration-300'>
 						<Image src={mmLight} alt='MarketingMix' className='hidden dark:block w-36' />
 						<Image src={mmDark} alt='MarketingMix' className='block dark:hidden w-36' />

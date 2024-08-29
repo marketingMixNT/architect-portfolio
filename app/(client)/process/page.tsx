@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import Navbar from '@/app/components/nav/Navbar'
+
+import Header from '@/app/components/Header'
 
 export const metadata: Metadata = {
 	title: 'Proces projektowy | Anna Zientara',
@@ -9,11 +10,12 @@ export const metadata: Metadata = {
 export default function Process() {
 	return (
 		<>
-			<header>
-				<Navbar/>
-			</header>
+			<Header
+				image="bg-[url('/assets/hero--mobile.webp')] sm:bg-[url('/assets/hero.webp')]"
+				title='Proces projektowy'
+			/>
 
-			<main className='mt-32'>
+			<main className='py-20 text-center'>
 				<p className='font-heading text-8xl'>Proces projektowy</p>
 			</main>
 		</>
