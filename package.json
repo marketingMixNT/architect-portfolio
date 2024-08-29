@@ -15,7 +15,6 @@
     "@vercel/speed-insights": "^1.0.12",
     "fslightbox-react": "^1.7.6",
     "hamburger-react": "^2.5.1",
-    "lightgallery": "^2.7.2",
     "lucide-react": "^0.436.0",
     "next": "14.2.6",
     "next-sanity": "^9.4.7",
@@ -25,11 +24,10 @@
     "sanity": "^3.56.0",
     "sass": "^1.77.8",
     "styled-components": "^6.1.12",
-    "swiper": "^11.1.10",
-    "yet-another-react-lightbox": "^3.21.4"
+    "swiper": "^11.1.10"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.14",
+    "@tailwindcss/typography": "^0.5.15",
     "@types/fslightbox-react": "^1.7.7",
     "@types/node": "^20",
     "@types/react": "^18",

@@ -72,7 +72,7 @@ const Footer = () => {
 				<hr className='border-secondary-400 dark:border-primary-400 w-full ' />
 				{/* BOTTOM */}
 				<div className='flex flex-col sm:flex-row w-full justify-center items-center sm:justify-between gap-6'>
-					<BaseLink href='#' noArrow small>
+					<BaseLink href='/polityka-prywatnosci' noArrow small>
 						Polityka Prywatności
 					</BaseLink>
 

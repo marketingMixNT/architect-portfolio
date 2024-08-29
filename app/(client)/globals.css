@@ -25,3 +25,8 @@
   .swiper-pagination-bullet.swiper-pagination-bullet-active{
     background-color: white;
   }
+
+
+  /* .prose h2{
+    @apply text-fontDark dark:text-fontLight
+  } */

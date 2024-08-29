@@ -6,7 +6,7 @@ const Header = (props:{title:string,image:string}) => {
 		<header className={` w-full h-[50vh] bg-center bg-cover bg-no-repeat sm:bg-fixed bg-blend-multiply bg-gray-500 flex justify-center items-center text-center relative ${props.image}`}>
 			<Navbar />
 
-            <h1 className='text-7xl sm:text-9xl text-fontLight'>{props.title}</h1>
+            <h1 className='text-5xl xs:text-7xl sm:text-8xl text-fontLight'>{props.title}</h1>
 
 		
 

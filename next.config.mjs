@@ -22,6 +22,10 @@ const nextConfig = {
 				source: '/kontakt',
 				destination: '/contact',
 			},
+			{
+				source: '/polityka\\-prywatnosci',
+				destination: '/privacy-policy',
+			},
 		]
 	},
 }
