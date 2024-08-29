@@ -1,4 +1,11 @@
 import Header from '@/app/components/Header'
+
+import AboutSection from '@/app/components/home/About'
+import BannerBackgorund from '@/app/components/home/BannerBackgorund'
+import CareerOverview from '@/app/components/home/CareerOverview'
+import OurWork from '@/app/components/home/OurWork'
+import Services from '@/app/components/home/Services'
+
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -11,8 +18,12 @@ export default function About() {
 		<>
 			<Header image="bg-[url('/assets/hero--mobile.webp')] sm:bg-[url('/assets/hero.webp')]" title='O mnie' />
 
-			<main className='py-20 text-center'>
-				<p className='font-heading text-8xl'>o mnie</p>
+			<main>
+				<AboutSection />
+				<CareerOverview />
+				<BannerBackgorund />
+				<Services />
+				<OurWork />
 			</main>
 		</>
 	)

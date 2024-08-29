@@ -1,6 +1,11 @@
 import type { Metadata } from 'next'
 
 import Header from '@/app/components/Header'
+import About from '@/app/components/home/About'
+import CareerOverview from '@/app/components/home/CareerOverview'
+import BannerBackgorund from '@/app/components/home/BannerBackgorund'
+import Services from '@/app/components/home/Services'
+import OurWork from '@/app/components/home/OurWork'
 
 export const metadata: Metadata = {
 	title: 'Proces projektowy | Anna Zientara',
@@ -15,8 +20,12 @@ export default function Process() {
 				title='Proces projektowy'
 			/>
 
-			<main className='py-20 text-center'>
-				<p className='font-heading text-8xl'>Proces projektowy</p>
+			<main>
+				<About />
+				<CareerOverview />
+				<BannerBackgorund />
+				<Services />
+				<OurWork />
 			</main>
 		</>
 	)

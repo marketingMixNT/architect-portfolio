@@ -27,7 +27,9 @@ const images = [
 	'http://localhost:3000/assets/hero.webp',
 ]
 
-export const Project: FC<{ name: string }> = ({ name }) => {
+import React from 'react'
+
+const Project = () => {
 	const [toggler, setToggler] = useState(false)
 	const [selectedImageIndex, setSelectedImageIndex] = useState(0)
 
@@ -36,11 +38,9 @@ export const Project: FC<{ name: string }> = ({ name }) => {
 		setToggler(!toggler)
 	}
 
-	
-
 	return (
 		<div className='App'>
-			<Header image="bg-[url('/assets/hero--mobile.webp')] sm:bg-[url('/assets/hero.webp')]" title="Nazwa projektu" />
+			<Header image="bg-[url('/assets/hero--mobile.webp')] sm:bg-[url('/assets/hero.webp')]" title='Nazwa projektu' />
 
 			<main>
 				<Section className='pt-12 sm:pt-24 pb-12 sm:pb-24'>
@@ -90,37 +90,28 @@ export const Project: FC<{ name: string }> = ({ name }) => {
 					</Wrapper>
 					<div className='pt-20 lg:pt-32'>
 						<Swiper
-						
 							slidesPerView={1}
 							spaceBetween={40}
 							breakpoints={{
 								640: {
 									slidesPerView: 2,
-									
 								},
 
 								1000: {
 									slidesPerView: 3,
-									
 								},
 								1350: {
 									slidesPerView: 4,
-									
 								},
 								1600: {
 									slidesPerView: 5,
-									
 								},
 							}}
-							
-							
 							grabCursor={true}
-
 							autoplay={{
 								delay: 3000,
 								disableOnInteraction: true,
-							  }}
-						
+							}}
 							modules={[Autoplay]}
 							className='w-full h-96'>
 							{images.map((image, index) => (
