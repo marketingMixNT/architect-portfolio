@@ -202,7 +202,7 @@ export default function PrivacyPolicy() {
             utrzymanie sesji użytkownika Serwisu (po zalogowaniu), dzięki której użytkownik nie musi na każdej
             podstronie Serwisu ponownie wpisywać loginu i hasła;
         </li>
-        <li>realizacji celów określonych powyżej w części "Istotne techniki marketingowe";</li>
+        <li>realizacji celów określonych powyżej w części &quot;Istotne techniki marketingowe&ldquo;;</li>
     </ul>
     <p>
         W ramach Serwisu stosowane są dwa zasadnicze rodzaje plików cookies: &bdquo;sesyjne&rdquo; (session cookies) oraz &bdquo;stałe&rdquo;
