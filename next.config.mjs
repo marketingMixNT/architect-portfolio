@@ -24,7 +24,7 @@ const nextConfig = {
 			},
 			{
 				source: '/polityka\\-prywatnosci',
-				destination: '/privacy-policy',
+				destination: '/privacyPolicy',
 			},
 		]
 	},
