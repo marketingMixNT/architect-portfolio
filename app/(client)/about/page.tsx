@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function About() {
 	return (
 		<>
-			<Header image="bg-[url('/assets/hero--mobile.webp')] sm:bg-[url('/assets/hero.webp')]" title='O mnie' />
+			<Header image="/assets/hero.webp" title='O mnie' />
 
 			<main>
 				<AboutSection />

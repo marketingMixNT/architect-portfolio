@@ -3,6 +3,7 @@ export interface Project {
 	title: string
 	slug: string
     thumbnail: any
-	body: any
-    gallery: any
+	excerpt:any
+	content: any
+    imagesGallery: any
 }

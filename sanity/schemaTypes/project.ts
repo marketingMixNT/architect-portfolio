@@ -34,8 +34,14 @@ export const project = {
 			of: [{ type: 'image' }],
 		},
 		{
+			name: 'excerpt',
+			title: 'Krótki opis',
+			type: 'text',
+			validation: (Rule: Rule) => Rule.max(250).error('Maxymalnie 250 znaków'),
+		},
+		{
 			name: 'content',
-			title: 'Opis',
+			title: 'Opis na stronę projektu',
 			type: 'array',
 			of: [{ type: 'block' }],
 		},

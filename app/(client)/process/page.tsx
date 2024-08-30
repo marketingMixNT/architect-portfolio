@@ -16,7 +16,7 @@ export default function Process() {
 	return (
 		<>
 			<Header
-				image="bg-[url('/assets/hero--mobile.webp')] sm:bg-[url('/assets/hero.webp')]"
+				image="/assets/hero.webp"
 				title='Proces projektowy'
 			/>
 

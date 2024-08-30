@@ -1,43 +1,45 @@
 import type { Metadata } from 'next'
 import Header from '@/app/components/Header'
-import Projects from '@/app/components/home/Projects'
 import Section from '@/app/components/Section'
 import Wrapper from '@/app/components/Wrapper'
-import Subheading from '@/app/components/Subheading'
-import Heading from '@/app/components/Heading'
 import ProjectCard from '@/app/components/ProjectCard'
+
+import { client } from '@/sanity/lib/client'
+import { Project } from '@/sanity/lib/interface'
+
+async function getProjects() {
+	const query = `
+	*[_type == "project"] | {
+	  title,
+	  "slug":slug.current,
+	  thumbnail,
+	  excerpt,
+	}
+	`
+	const data = await client.fetch(query)
+	return data
+}
+
+export const revalidate = 60
 
 export const metadata: Metadata = {
 	title: 'Portfolio | Anna Zientara',
 	description: 'Meta desc Anna Zientara',
 }
 
-const projects = [
-	{
-		title: 'Projekt',
-		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptates animi id a nesciunt harum omnis, molestias quo blanditiis est.',
-	},
-	{
-		title: 'Projekt',
-		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptates animi id a nesciunt harum omnis, molestias quo blanditiis est.',
-	},
-	{
-		title: 'Projekt',
-		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptates animi id a nesciunt harum omnis, molestias quo blanditiis est.',
-	},
-]
 
-export default function Portfolio() {
+export default async function  Portfolio() {
+	const projects: Project[] = await getProjects()
 	return (
 		<>
-			<Header image="bg-[url('/assets/hero--mobile.webp')] sm:bg-[url('/assets/hero.webp')]" title='Portfolio' />
+			<Header image="/assets/hero.webp" title='Portfolio' />
 
 			<main>
 				<Section className='pt-12 pb-12'>
 					<Wrapper>
 						<div className='space-y-12 pt-20'>
 							{projects.map((project, index) => (
-								<ProjectCard key={index} title={project.title} desc={project.desc} />
+								<ProjectCard key={index} project={project} />
 							))}
 						</div>
 					</Wrapper>
