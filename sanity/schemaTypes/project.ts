@@ -29,21 +29,18 @@ export const project = {
 		},
 		{
 			name: 'imagesGallery',
-			title: 'Galeria',
 			type: 'array',
-			of: [{ type: 'image' }],
+			of: [{ type: 'image' ,options: { hotspot: true }}],
+			options: {
+				layout: 'grid',
+			},
+			validation: (Rule: Rule) => Rule.required().error('Pole wymagane'),
 		},
 		{
 			name: 'excerpt',
 			title: 'Krótki opis',
 			type: 'text',
-			validation: (Rule: Rule) => Rule.max(250).error('Maxymalnie 250 znaków'),
-		},
-		{
-			name: 'content',
-			title: 'Opis na stronę projektu',
-			type: 'array',
-			of: [{ type: 'block' }],
+			validation: (Rule: Rule) => Rule.max(350).error('Maksymalnie 350 znaków'),
 		},
 	],
 }

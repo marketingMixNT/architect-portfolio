@@ -9,7 +9,7 @@ import { Project } from '@/sanity/lib/interface'
 
 async function getProjects() {
 	const query = `
-	*[_type == "project"] | {
+	*[_type == "project"] | order(_createdAt desc) {
 	  title,
 	  "slug":slug.current,
 	  thumbnail,
@@ -27,17 +27,16 @@ export const metadata: Metadata = {
 	description: 'Meta desc Anna Zientara',
 }
 
-
-export default async function  Portfolio() {
+export default async function Portfolio() {
 	const projects: Project[] = await getProjects()
 	return (
 		<>
-			<Header image="/assets/hero.webp" title='Portfolio' />
+			<Header image='/assets/hero.jpg' title='Portfolio' />
 
 			<main>
 				<Section className='pt-12 pb-12'>
 					<Wrapper>
-						<div className='space-y-12 pt-20'>
+						<div className='space-y-12 pt-20 max-w-screen-xl mx-auto'>
 							{projects.map((project, index) => (
 								<ProjectCard key={index} project={project} />
 							))}

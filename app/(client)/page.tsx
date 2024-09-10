@@ -5,7 +5,7 @@ import About from '@/app/components/home/About'
 import CareerOverview from '@/app/components/home/CareerOverview'
 import BannerBackgorund from '@/app/components/home/BannerBackgorund'
 import Services from '@/app/components/home/Services'
-import OurWork from '@/app/components/home/OurWork'
+import Process from '@/app/components/home/Process'
 import Projects from '@/app/components/home/Projects'
 import Contact from '@/app/components/home/Contact'
 
@@ -14,24 +14,23 @@ import { Project } from '@/sanity/lib/interface'
 
 async function getProjects() {
 	const query = `
-	  *[_type == "project"][0...3] {
-		title,
-		 "slug": slug.current,
-		thumbnail,
-		excerpt,
-	  }
+	*[_type == "project"] | order(_createdAt desc)[0...3] {
+  title,
+  "slug": slug.current,
+  thumbnail,
+  excerpt,
+}
 	`
 	const data = await client.fetch(query)
 	return data
-  }
-  
-
-export const revalidate = 60
+}
 
 export const metadata: Metadata = {
-	title: 'Anna Zientara',
-	description: 'Meta desc Anna Zientara',
+	description:
+		'Tworzę wyjątkowe, spersonalizowane wnętrza inspirowane stylem życia moich klientów. Anna Zientara – architekt wnętrz, który łączy harmonię z funkcjonalnością.',
 }
+
+export const revalidate = 60
 
 export default async function Home() {
 	const projects: Project[] = await getProjects()
@@ -41,10 +40,10 @@ export default async function Home() {
 
 			<main>
 				<About />
-				<CareerOverview />
+				{/* <CareerOverview /> */}
 				<BannerBackgorund />
-				<Services />
-				<OurWork />
+				{/* <Services /> */}
+				<Process />
 				<Projects projects={projects} />
 				<Contact />
 			</main>

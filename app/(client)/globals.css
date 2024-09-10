@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+html{
+  @apply scroll-smooth scroll-p-20
+}
   
   .swiper-slide {
     text-align: center;

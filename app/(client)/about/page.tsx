@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function About() {
 	return (
 		<>
-			<Header image="/assets/hero.webp" title='O mnie' />
+			<Header image='/assets/hero.jpg' title='O mnie' />
 
 			<main>
 				<AboutSection />

@@ -9,6 +9,7 @@ import 'swiper/css/navigation'
 import { Autoplay } from 'swiper/modules'
 import FsLightbox from 'fslightbox-react'
 import { urlFor } from '@/sanity/lib/image'
+import Image from 'next/image'
 
 const ImageCarousel = (props: { images: Array<{ asset: { _ref: string } }> }) => {
 	const [toggler, setToggler] = useState(false)
@@ -23,15 +24,17 @@ const ImageCarousel = (props: { images: Array<{ asset: { _ref: string } }> }) =>
 
 	return (
 		<>
-			{images.length >2 && images.length < 5 && (
+			{images.length > 2 && images.length < 5 && (
 				<div className={`flex justify-center flex-wrap items-center  gap-12 mx-12`}>
 					{images.map((image, index) => (
-						<img
+						<Image
 							key={index}
 							src={image}
 							alt={`Zdjęcie ${index + 1}`}
 							className='object-cover w-full h-full cursor-pointer aspect-square max-w-[500px]'
 							onClick={() => handleSlideClick(index + 1)}
+							width={500}
+							height={500}
 						/>
 					))}
 				</div>
@@ -66,11 +69,13 @@ const ImageCarousel = (props: { images: Array<{ asset: { _ref: string } }> }) =>
 					className='w-full h-96'>
 					{images.map((image, index) => (
 						<SwiperSlide key={index}>
-							<img
+							<Image
 								src={image}
 								alt={`Zdjęcie ${index + 1}`}
 								className='object-cover w-full h-full cursor-pointer'
 								onClick={() => handleSlideClick(index + 1)}
+								width={500}
+								height={500}
 							/>
 						</SwiperSlide>
 					))}

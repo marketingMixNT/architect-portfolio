@@ -7,31 +7,17 @@ import Heading from '@/app/components/Heading'
 import ProjectCard from '@/app/components/ProjectCard'
 import { Project } from '@/sanity/lib/interface'
 
-// const projects = [
-// 	{
-// 		title: 'Projekt',
-// 		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptates animi id a nesciunt harum omnis, molestias quo blanditiis est.',
-// 	},
-// 	{
-// 		title: 'Projekt',
-// 		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptates animi id a nesciunt harum omnis, molestias quo blanditiis est.',
-// 	},
-// 	{
-// 		title: 'Projekt',
-// 		desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptates animi id a nesciunt harum omnis, molestias quo blanditiis est.',
-// 	},
-// ]
 
 const Projects = (props:{projects:Project[]}) => {
 	return (
 		<Section className='pt-12 pb-12'>
 			<Wrapper>
 				<div className='space-y-5'>
-					<Subheading>Our</Subheading>
+					<Subheading>Moje</Subheading>
 					<Heading>Projekty</Heading>
 				</div>
 
-				<div className='space-y-12 pt-20'>
+				<div className='space-y-12 pt-20 max-w-screen-xl mx-auto'>
 					{props.projects.map((project, index) => (
 						<ProjectCard key={index} project={project} />
 					))}

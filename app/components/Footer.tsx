@@ -28,7 +28,7 @@ const Footer = () => {
 						<Link href='/' className='text-3xl sm:text-4xl font-semibold'>
 							Anna Zientara
 						</Link>
-						<Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error alias accusamus possimus!</Text>
+						<Text>Architektura wnętrz z pasją i zaangażowaniem</Text>
 					</div>
 					{/* links */}
 					<div className='hidden lg:flex flex-col'>

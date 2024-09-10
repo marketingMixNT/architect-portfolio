@@ -4,6 +4,5 @@ export interface Project {
 	slug: string
     thumbnail: any
 	excerpt:any
-	content: any
     imagesGallery: any
 }
