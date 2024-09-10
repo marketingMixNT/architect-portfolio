@@ -50,11 +50,11 @@ const Project = async ({ params }: { params: { slug: string } }) => {
 								/>
 							))}
 						</div>
-						<div className='relative w-full lg:w-[45%] lg:pl-12 prose'>
+						{/* <div className='relative w-full lg:w-[45%] lg:pl-12 prose'>
 							<div className='sticky top-32 leading-relaxed text-gray-500 dark:text-gray-400 text-lg'>
 								<PortableText value={project.content} />
 							</div>
-						</div>
+						</div> */}
 					</Wrapper>
 					<div className='pt-20 lg:pt-32'>
 						<ImageCarousel images={project.imagesGallery} />
