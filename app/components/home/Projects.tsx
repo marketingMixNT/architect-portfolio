@@ -6,6 +6,7 @@ import Subheading from '@/app/components/Subheading'
 import Heading from '@/app/components/Heading'
 import ProjectCard from '@/app/components/ProjectCard'
 import { Project } from '@/sanity/lib/interface'
+import BaseLink from '../BaseLink'
 
 
 const Projects = (props:{projects:Project[]}) => {
@@ -17,10 +18,11 @@ const Projects = (props:{projects:Project[]}) => {
 					<Heading>Projekty</Heading>
 				</div>
 
-				<div className='space-y-12 pt-20 max-w-screen-xl mx-auto'>
+				<div className='space-y-12 pt-20 max-w-screen-xl mx-auto '>
 					{props.projects.map((project, index) => (
 						<ProjectCard key={index} project={project} />
 					))}
+				<BaseLink href='/portfolio'>Zobacz wszystkie projekty</BaseLink>
 				</div>
 			</Wrapper>
 		</Section>

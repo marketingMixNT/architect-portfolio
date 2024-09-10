@@ -31,7 +31,7 @@ const config: Config = {
 					400: '#09090b',
 				},
 				accent: {
-					400: '#333',
+					400: '#b99e87',
 				},
 				fontDark: '#333',
 				fontLight: '#f3f4f6',

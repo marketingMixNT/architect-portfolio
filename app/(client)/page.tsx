@@ -28,6 +28,15 @@ async function getProjects() {
 export const metadata: Metadata = {
 	description:
 		'Tworzę wyjątkowe, spersonalizowane wnętrza inspirowane stylem życia moich klientów. Anna Zientara – architekt wnętrz, który łączy harmonię z funkcjonalnością.',
+	openGraph: {
+		title: 'Anna Zientara - Architekt Wnętrz',
+		description:
+			'Tworzę wyjątkowe, spersonalizowane wnętrza inspirowane stylem życia moich klientów. Anna Zientara – architekt wnętrz, który łączy harmonię z funkcjonalnością.',
+		type: 'website',
+		locale: 'pl_PL',
+		url: '',
+		siteName: 'Anna Zientara - Architekt Wnętrz',
+	},
 }
 
 export const revalidate = 60
