@@ -1,8 +1,20 @@
+import Image from 'next/image'
 import React from 'react'
+
+import BannerImg from '@/public/assets/banner.jpg'
 
 const BannerBackgorund = () => {
 	return (
-		<div className=" w-full h-[600px] bg-[url('/assets/banner.jpg')] bg-center bg-cover bg-no-repeat sm:bg-fixed bg-blend-multiply  shadow-2xl shadow-gray-700"></div>
+		<div className=' w-full h-[700px]   shadow-2xl shadow-gray-700 relative'>
+			<Image
+				src={BannerImg}
+			
+				alt='Projekt w wykonaniu Anna Zientara'
+				className='w-full h-full object-cover '
+				fill
+				placeholder='blur'
+			/>
+		</div>
 	)
 }
 

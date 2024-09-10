@@ -18,7 +18,7 @@ const Projects = (props:{projects:Project[]}) => {
 					<Heading>Projekty</Heading>
 				</div>
 
-				<div className='space-y-12 pt-20 max-w-screen-xl mx-auto '>
+				<div className='space-y-12 pt-20 max-w-screen-2xl mx-auto '>
 					{props.projects.map((project, index) => (
 						<ProjectCard key={index} project={project} />
 					))}

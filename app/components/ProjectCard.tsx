@@ -7,15 +7,22 @@ import BaseLink from './BaseLink'
 import { Project } from '@/sanity/lib/interface'
 import { urlFor } from '@/sanity/lib/image'
 
-const ProjectCard = (props: { project: Project }) => {
+import { getImage } from '../lib/getImage'
+
+const ProjectCard = async (props: { project: Project }) => {
+
+	const {base64,img} = await getImage(urlFor(props.project.thumbnail).url())
+
 	return (
 		<div className='flex flex-col lg:flex-row gap-12  py-10 border-b border-gray-400  '>
 			<Image
-				src={urlFor(props.project.thumbnail).url()}
+				{...img}
 				alt={props.project.title}
 				className=' lg:w-1/2 shadow-md shadow-gray-700 '
-				width={1000}
-				height={1000}
+				width={700}
+				height={450}
+				placeholder='blur'
+				blurDataURL={base64}
 			/>
 			<div className=' flex flex-col justify-between lg:w-1/2'>
 				<div className='space-y-4 md:w-[80%]'>

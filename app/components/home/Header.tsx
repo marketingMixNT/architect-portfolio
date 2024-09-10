@@ -5,12 +5,22 @@ import { CircleArrowDown } from 'lucide-react'
 
 import Navbar from '@/app/components/nav/Navbar'
 import BaseLink from '@/app/components/BaseLink'
+import Image from 'next/image'
+
+import HeroImg from '@/public/assets/hero.jpg'
 const Header = () => {
 	return (
-		<header className="relative flex justify-center items-center  w-full h-screen bg-[url('/assets/hero.jpg')]  bg-center bg-cover bg-no-repeat sm:bg-fixed bg-blend-multiply bg-gray-400 text-fontLight">
+		<header className="relative flex justify-center items-center  w-full h-screen  text-fontLight">
 			<Navbar />
-
-			<div className=' flex flex-col md:flex-row justify-between gap-12 sm:gap-0 sm:h-[70%] 2xl:h-[60%] w-[90%] '>
+			<Image
+				src={HeroImg}
+				alt='Projekt w wykonaniu Anna Zientara'
+				className='w-full h-full object-cover '
+				fill
+				placeholder='blur'
+			/>
+			<div className='absolute inset-0 bg-black opacity-40'></div>
+			<div className=' flex flex-col md:flex-row justify-between gap-12 sm:gap-0 sm:h-[70%] 2xl:h-[60%] w-[90%] z-10'>
 				<div className='xl:w-1/3'>
 					<h1 className='text-5xl smtext-8xl lg:text-9xl'>Architektura pełna harmonii</h1>
 				</div>
