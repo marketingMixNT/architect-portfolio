@@ -49,9 +49,7 @@ export default async function Home() {
 
 			<main>
 				<About />
-				{/* <CareerOverview /> */}
 				<BannerBackgorund />
-				{/* <Services /> */}
 				<Process />
 				<Projects projects={projects} />
 				<Contact />
