@@ -9,20 +9,22 @@ import { urlFor } from '@/sanity/lib/image'
 
 import { getImage } from '../lib/getImage'
 
+import blur from '../lib/blurDataUrl'
+
 const ProjectCard = async (props: { project: Project }) => {
 
-	const {base64,img} = await getImage(urlFor(props.project.thumbnail).url())
+	
 
 	return (
 		<div className='flex flex-col lg:flex-row gap-12  py-10 border-b border-gray-400  '>
 			<Image
-				{...img}
+				src={urlFor(props.project.thumbnail).url()}
 				alt={props.project.title}
 				className=' lg:w-1/2 shadow-md shadow-gray-700 '
 				width={700}
 				height={450}
 				placeholder='blur'
-				blurDataURL={base64}
+				blurDataURL={blur}
 			/>
 			<div className=' flex flex-col justify-between lg:w-1/2'>
 				<div className='space-y-4 md:w-[80%]'>
