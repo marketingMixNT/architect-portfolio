@@ -2,6 +2,8 @@ import Header from '@/app/components/Header'
 import Wrapper from '@/app/components/Wrapper'
 import type { Metadata } from 'next'
 
+import HeroImg from '@/public/assets/hero.webp'
+
 export const metadata: Metadata = {
 	title: 'Polityka Prywatności | Anna Zientara',
 	description: 'Meta desc Anna Zientara',
@@ -11,7 +13,7 @@ export default function PrivacyPolicy() {
 	return (
 		<>
 			<Header
-				image="bg-[url('/assets/hero--mobile.webp')] sm:bg-[url('/assets/hero.webp')]"
+				image={HeroImg}
 				title='Polityka Prywatności'
 			/>
 

@@ -1,10 +1,9 @@
 import type { Metadata } from 'next'
-import { SpeedInsights } from '@vercel/speed-insights/next'
-import { Analytics } from '@vercel/analytics/react'
+
 import { Provider } from '@/app/utils/Provider'
 import { font_heading, font_text } from '@/app/utils/fonts'
 import "./globals.css"
-import Footer from '@/app/components/Footer'
+
 
 export const metadata: Metadata = {
 	title:{
@@ -27,8 +26,7 @@ export default function RootLayout({
 					{children}
 				
 				</Provider>
-				<SpeedInsights />
-				<Analytics />
+				
 			</body>
 		</html>
 	)

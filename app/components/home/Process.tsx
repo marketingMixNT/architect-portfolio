@@ -46,7 +46,7 @@ const Process = () => {
 				</div>
 				{/* text */}
 				<div className='flex flex-col justify-between items-center gap-12 lg:gap-0 '>
-					<div className='w-[85%] flex flex-col space-y-5 '>
+					<div className='xl:w-[85%] flex flex-col space-y-5 '>
 						<Subheading>Proces</Subheading>
 						<Heading>Projektowy</Heading>
 						<ul className='pt-12 space-y-16 lg:space-y-12 '>

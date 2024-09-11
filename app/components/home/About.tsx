@@ -40,11 +40,11 @@ const About = () => {
 					</div>
 				</div>
 				{/* image */}
-				<div className=' flex justify-center items-center'>
+				<div className=' flex justify-center items-center xl:p-8'>
 					<Image
 						src={AnnaZientara}
 						alt='Anna Zientara'
-						className='aspect-square h-[600px] w-auto  shadow-2xl shadow-gray-700 object-cover'
+						className=' aspect-square  w-auto  shadow-2xl shadow-gray-700 object-cover'
 						placeholder='blur'
 					/>
 					
