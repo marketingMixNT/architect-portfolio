@@ -7,7 +7,7 @@ import ProjectCard from '@/app/components/ProjectCard'
 import { client } from '@/sanity/lib/client'
 import { Project } from '@/sanity/lib/interface'
 
-import HeroImage from '@/public/assets/hero.jpg'
+import HeroImage from '@/public/assets/portfolio-hero.webp'
 
 async function getProjects() {
 	const query = `
@@ -24,7 +24,8 @@ async function getProjects() {
 
 export const metadata: Metadata = {
 	title: 'Portfolio ',
-	description: 'Odkryj moje projekty wnętrz, które łączą funkcjonalność z estetyką. Zainspiruj się moimi realizacjami i zobacz, jak tworzę unikalne przestrzenie.',
+	description:
+		'Odkryj moje projekty wnętrz, które łączą funkcjonalność z estetyką. Zainspiruj się moimi realizacjami i zobacz, jak tworzę unikalne przestrzenie.',
 	openGraph: {
 		title: 'Portfolio | Anna Zientara - Architekt Wnętrz',
 		description:

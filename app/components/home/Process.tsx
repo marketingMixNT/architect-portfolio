@@ -7,7 +7,7 @@ import Subheading from '@/app/components/Subheading'
 import Heading from '@/app/components/Heading'
 import Text from '@/app/components/Text'
 
-import WorkImage from '@/public/assets/work.jpg'
+import WorkImage from '@/public/assets/proces.webp'
 import BaseLink from '../BaseLink'
 
 const processList = [

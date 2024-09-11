@@ -9,7 +9,7 @@ import Timeline from '@/app/components/Timeline'
 import Subheading from '@/app/components/Subheading'
 import Heading from '@/app/components/Heading'
 
-import HeroImage from '@/public/assets/hero.jpg'
+import HeroImage from '@/public/assets/proces-hero.webp'
 
 const conceptionList = [
 	{
@@ -88,7 +88,7 @@ export default function Process() {
 						</div>
 
 						<div className='space-y-12'>
-						<h2 className='font-heading text-3xl xs:text-5xl ml-6 uppercase '>Projekty</h2>
+							<h2 className='font-heading text-3xl xs:text-5xl ml-6 uppercase '>Projekty</h2>
 							<Timeline>
 								{projectList.map((item, index) => (
 									<TimelineItem key={index} title={item.title} text={item.text} />
@@ -97,7 +97,7 @@ export default function Process() {
 						</div>
 
 						<div className='space-y-12'>
-						<h2 className='font-heading text-3xl xs:text-5xl ml-6 uppercase '>Dokumentacja</h2>
+							<h2 className='font-heading text-3xl xs:text-5xl ml-6 uppercase '>Dokumentacja</h2>
 							<Timeline>
 								{documentationList.map((item, index) => (
 									<TimelineItem key={index} title={item.title} text={item.text} />

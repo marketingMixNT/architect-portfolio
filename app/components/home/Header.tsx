@@ -7,7 +7,7 @@ import Navbar from '@/app/components/nav/Navbar'
 import BaseLink from '@/app/components/BaseLink'
 import Image from 'next/image'
 
-import HeroImg from '@/public/assets/hero.jpg'
+import HeroImg from '@/public/assets/hero.webp'
 const Header = () => {
 	return (
 		<header className="relative flex justify-center items-center  w-full h-screen  text-fontLight">

@@ -8,7 +8,7 @@ import Subheading from '@/app/components/Subheading'
 import Heading from '@/app/components/Heading'
 import BaseLink from '@/app/components/BaseLink'
 
-import DummyImage from '@/public/assets/hero.jpg'
+import DummyImage from '@/public/assets/kontakt.webp'
 
 import socials from '@/app/utils/socials'
 
@@ -18,7 +18,6 @@ const Contact = () => {
 			<Wrapper className=' grid lg:grid-cols-2 gap-20 '>
 				<div className='flex flex-col  items-start gap-12 lg:gap-12 '>
 					<div className='space-y-5'>
-						
 						<Heading>kontakt</Heading>
 					</div>
 					{/* CONTAINER */}

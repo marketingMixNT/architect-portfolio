@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
 	return (
 		<>
 			<Header
-				image="bg-[url('/assets/hero--mobile.webp')] sm:bg-[url('/assets/hero.jpg')]"
+				image="bg-[url('/assets/hero--mobile.webp')] sm:bg-[url('/assets/hero.webp')]"
 				title='Polityka Prywatności'
 			/>
 

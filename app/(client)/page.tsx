@@ -2,9 +2,6 @@ import type { Metadata } from 'next'
 
 import Header from '@/app/components/home/Header'
 import About from '@/app/components/home/About'
-import CareerOverview from '@/app/components/home/CareerOverview'
-import BannerBackgorund from '@/app/components/home/BannerBackgorund'
-import Services from '@/app/components/home/Services'
 import Process from '@/app/components/home/Process'
 import Projects from '@/app/components/home/Projects'
 import Contact from '@/app/components/home/Contact'
@@ -49,7 +46,6 @@ export default async function Home() {
 
 			<main>
 				<About />
-				<BannerBackgorund />
 				<Process />
 				<Projects projects={projects} />
 				<Contact />

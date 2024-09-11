@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-import BannerImg from '@/public/assets/banner.jpg'
+import BannerImg from '@/public/assets/banner.webp'
 
 const BannerBackgorund = () => {
 	return (

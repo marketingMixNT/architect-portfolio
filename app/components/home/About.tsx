@@ -8,7 +8,7 @@ import Heading from '@/app/components/Heading'
 import Text from '@/app/components/Text'
 import BaseLink from '@/app/components/BaseLink'
 
-import AnnaZientara from '@/public/assets/anna-zientara.jpeg'
+import AnnaZientara from '@/public/assets/anna-zientara.webp'
 
 const About = () => {
 	return (
@@ -44,7 +44,7 @@ const About = () => {
 					<Image
 						src={AnnaZientara}
 						alt='Anna Zientara'
-						className='aspect-square max-h-[600px] w-auto  shadow-2xl shadow-gray-700 object-cover'
+						className='aspect-square h-[600px] w-auto  shadow-2xl shadow-gray-700 object-cover'
 						placeholder='blur'
 					/>
 					

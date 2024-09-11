@@ -1,6 +1,6 @@
 import React from 'react'
 
-import DummyImage from '@/public/assets/hero.jpg'
+import DummyImage from '@/public/assets/hero.webp'
 import Image from 'next/image'
 import Text from './Text'
 import BaseLink from './BaseLink'
@@ -12,9 +12,6 @@ import { getImage } from '../lib/getImage'
 import blur from '../lib/blurDataUrl'
 
 const ProjectCard = async (props: { project: Project }) => {
-
-	
-
 	return (
 		<div className='flex flex-col lg:flex-row gap-12  py-10 border-b border-gray-400  '>
 			<Image
