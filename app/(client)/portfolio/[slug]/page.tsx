@@ -6,7 +6,6 @@ import type { Project } from '@/sanity/lib/interface'
 import { client } from '@/sanity/lib/client'
 import type { Metadata } from 'next'
 import { urlFor } from '@/sanity/lib/image'
-import HeaderDynamic from '@/app/components/HeaderDynamic'
 import Gallery from '@/app/components/Gallery'
 import Header from '@/app/components/Header'
 
