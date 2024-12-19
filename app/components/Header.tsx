@@ -14,6 +14,7 @@ const Header = (props: { title: string; image: StaticImageData | string }) => {
 				fill
 				placeholder='blur'
 				blurDataURL={blur}
+				loading='eager'
 			/>
 			<div className='absolute inset-0 bg-black opacity-40'></div>
 			<Navbar />

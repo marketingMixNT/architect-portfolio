@@ -11,7 +11,7 @@ import { Project } from '@/sanity/lib/interface'
 
 async function getProjects() {
 	const query = `
-	*[_type == "project"] | order(_createdAt desc)[0...3] {
+	*[_type == "project"] | order(_createdAt asc)[0...4] {
   title,
   "slug": slug.current,
   thumbnail,

@@ -18,7 +18,7 @@ const Projects = (props:{projects:Project[]}) => {
 					<Heading>Projekty</Heading>
 				</div>
 
-				<div className='space-y-12 pt-20 max-w-screen-2xl mx-auto '>
+				<div className='flex gap-y-16 gap-x-6 justify-center items-center flex-wrap py-12'>
 					{props.projects.map((project, index) => (
 						<ProjectCard key={index} project={project} />
 					))}

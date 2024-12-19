@@ -18,6 +18,7 @@ const Header = () => {
 				className='w-full h-full object-cover '
 				fill
 				placeholder='blur'
+				loading='eager'
 			/>
 			<div className='absolute inset-0 bg-black opacity-40'></div>
 			<div className=' flex flex-col md:flex-row justify-between gap-12 sm:gap-0 sm:h-[70%] 2xl:h-[60%] w-[90%] z-10'>
